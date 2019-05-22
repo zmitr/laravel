@@ -14,8 +14,8 @@
 
 ## Информация п оустанвке
 - сd domains
-- git clone
-- cd laravel
+- git clone https://github.com/Vladimir547/glassesLaravel.git
+- cd glassesLaravel
 - из файла env.example создать .env
-- composer self update
+- composer self-update
 - composer install

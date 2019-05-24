@@ -19,3 +19,5 @@
 - из файла env.example создать .env
 - composer self-update
 - composer install
+- создать бд с именем glasses
+- php artisan migrate

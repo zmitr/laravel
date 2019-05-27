@@ -18,4 +18,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('all','MaintextController@getAll');
 
+route::post('home','HomeController@postindex');
+
 Route::get('/{url}','MaintextController@getIndex');

@@ -15,6 +15,7 @@
 </head>
 
 <body>
+{!!menu('main','mymenu')!!}
 <header class='header'>
     <div class='container'>
         <div class='row'>
@@ -128,5 +129,8 @@
 @yield('content')
 </body>
 @section('scripts')
+<script src="{{asset('js/app.js')}}">
+
+</script>
 @show
 </html>

@@ -12,6 +12,10 @@
 */
 route::get('/','BaseController@getIndex');
 
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -21,3 +25,6 @@ Route::get('all','MaintextController@getAll');
 route::post('home','HomeController@postindex');
 
 Route::get('/{url}','MaintextController@getIndex');
+
+
+

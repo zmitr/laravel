@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-<form method=POST action="{{asset('home')}}">
+<form method=POST action="{{asset('home')}}" enctype="multipart/form-data">
 {!!csrf_field()!!}
   <div class="form-group">
     <label for="glassname">Название </label>
@@ -25,6 +25,17 @@
 	</b>
 	@endif
   </div>
+  
+  <div class="form-group">
+    <label for="glassname">Цена </label>
+    <input class="form-control" id="examplePrice" name ="price" placeholder="Введите цену">
+	@if ($errors->has('name'))
+	<b>
+		{{$errors->first('name')}}
+	</b>
+	@endif
+  </div>
+  
   <div class="form-group">
     <label for="exampleDescription">Описание</label>
   	<textarea rows="10" cols="45" name="body"></textarea></p>
@@ -40,7 +51,7 @@
   
   <div class="form-group">
     <label for="exampleInputFile">Изображение</label>
-    <input type="file" id="exampleInputFile">
+    <input type="file" id="exampleInputFile" name="pic1">
     
   </div>
   

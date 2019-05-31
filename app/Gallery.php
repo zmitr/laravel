@@ -9,6 +9,7 @@ class Gallery extends Model
     public $fillable = [
 	'name',
 	'body',
+	'price',
 	'picture',
 	'user_id',
 	'status',

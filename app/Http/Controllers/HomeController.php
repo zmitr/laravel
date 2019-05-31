@@ -47,9 +47,16 @@ class HomeController extends Controller
 	// }
 	public function postindex(GalleryRequest $r)
 	{
-
+		$pic = \App::make('App\Libs\Imag')->URL($_FILES['pic1']['tmp_name']);
+		if (!$pic) {
+			$r['picture'] = '';
+		}
+		else {
+			$r['picture'] = $pic;
+		}
+		
 		$r['user_id'] = (isset(Auth::user()->id))?Auth::user()->id:0;
-		$r['picture'] = '';
+		//$r['picture'] = '';
 		$r['status'] = '';
 		$r['catalog_id'] = 2;
 		unset($r['_token']);

@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-//use Illuminate\Http\Request;
+use App\Gallery;
 
 class BaseController extends Controller
 {
     public function getIndex(){
-        return view('welcome');
+        $objs = Gallery::OrderBy('Id','DESC')->paginate(8);
+		return view('welcome',compact('objs')) ;
     }
 }

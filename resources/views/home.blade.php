@@ -29,11 +29,7 @@
   <div class="form-group">
     <label for="glassname">Цена </label>
     <input class="form-control" id="examplePrice" name ="price" placeholder="Введите цену">
-	@if ($errors->has('name'))
-	<b>
-		{{$errors->first('name')}}
-	</b>
-	@endif
+	
   </div>
   
   <div class="form-group">

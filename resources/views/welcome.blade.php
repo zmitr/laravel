@@ -1,4 +1,13 @@
 @extends('layouts.base')
+
+@section('scripts')
+	@parent
+	<script src="{{asset('js/modal.js')}}">
+	</script>
+
+@endsection
+
+
 @section('content')
     <section class='products'>
         <div class='container'>
@@ -22,7 +31,13 @@
                         </div>
                         <div class='item__info'>
                             <div class='item__text'>
-                                <h5>{{$one->name}}</h5>
+                                <h5>
+								<a href="#"
+								data_id="{{$one->id}}"
+								class="m_click">
+								{{$one->name}}
+								</a>
+								</h5>
                                 <p><span>{{$one->price}}</span></p>
                             </div>
                             <div class='item__cart circle'>

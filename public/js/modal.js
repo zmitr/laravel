@@ -18,6 +18,24 @@ $(function () {
 		$('.modal-window').remove();
 		$('#jQuery-overlay').remove();
 		}).appendTo(modal);
+	$.ajaxSetup({
+		type:'POST',
+		headers {'x-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')},
+		
+		})
+	
+	$.ajax({
+		url:'/ajax/product',
+		data:'id='+data,
+		timeout:'3000',
+		success:function(data){
+			modal.append(data);
+			},
+		error:function(msg){
+			console.log(msg);
+			}
+
+		});
 	
 	})
 

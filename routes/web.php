@@ -24,6 +24,10 @@ Route::get('all','MaintextController@getAll');
 
 route::post('home','HomeController@postindex');
 
+//Ajax
+route::post('/ajax/product','Ajax\ProductController@postindex');
+
+
 Route::get('/{url}','MaintextController@getIndex');
 
 

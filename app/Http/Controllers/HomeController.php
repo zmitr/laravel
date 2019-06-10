@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Gallery;
 use Auth;
 use App\Http\Requests\GalleryRequest;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -64,4 +65,8 @@ class HomeController extends Controller
 		Gallery::create($r->All());
 		 return redirect()->back();
 	}
+	public function getAdmin(){
+         $users = User::all();
+         return response()->json($users);
+    }
 }

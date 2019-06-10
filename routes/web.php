@@ -22,10 +22,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('all','MaintextController@getAll');
 
-route::post('home','HomeController@postindex');
+Route::post('home','HomeController@postindex');
+
+Route::group(['admin'],function(){
+    Route::get('home/admin','HomeController@getAdmin');
+});
 
 //Ajax
-route::post('/ajax/product','Ajax\ProductController@postindex');
+Route::post('/ajax/product','Ajax\ProductController@postindex');
 
 
 Route::get('/{url}','MaintextController@getIndex');

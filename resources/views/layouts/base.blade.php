@@ -18,6 +18,8 @@
 
 <body>
 {!!menu('main','mymenu')!!}
+<H1>{{$name}}</H1>
+
 <header class='header'>
     <div class='container'>
         <div class='row'>
@@ -129,6 +131,10 @@
     </div>
 </section>
 @yield('content')
+@foreach($s_objs as $one)
+    <a href="{{asset($one->url)}}"> {{$one->name}}</a>
+@endforeach
+
 </body>
 @section('scripts')
 <script src="{{asset('js/app.js')}}">

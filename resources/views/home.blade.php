@@ -19,11 +19,17 @@
   <div class="form-group">
     <label for="glassname">Название </label>
     <input class="form-control" id="exampleInputEmail1" name ="name" placeholder="Название">
-	@if ($errors->has('name'))
-	<b>
-		{{$errors->first('name')}}
-	</b>
-	@endif
+      @if ($errors->has('name'))
+          <span class="help-block">
+              <l>
+                  {{$errors->first('name')}}
+              </l>
+          </span>
+      @endif
+
+
+
+
   </div>
   
   <div class="form-group">

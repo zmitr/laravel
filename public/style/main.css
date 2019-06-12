@@ -101,6 +101,8 @@ option{
     text-transform: uppercase;
     font-weight: 700;
     font-size: 14px;
+    margin-left: 10px;
+
 }
 .menu__header li a:hover{
     color: #4cb1ca;

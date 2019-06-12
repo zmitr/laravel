@@ -57,12 +57,12 @@
             <div class='col-lg-5 col-md-5'>
                 <div class='menu'>
                     <ul class='menu__header'>
-                        <li><a href="#">home</a></li>
-                        <li><a href="{{asset('/women')}}">women</a></li>
-                        <li><a href="{{asset('/man')}}">men</a></li>
-                        <li><a href="{{asset('/others')}}">other</a></li>
+                        <li><a href="#">{{__('menu.menu.home')}}</a></li>
+                        <li><a href="{{asset('/women')}}">{{__('menu.menu.women')}}</a></li>
+                        <li><a href="{{asset('/man')}}">{{__('menu.menu.men')}}</a></li>
+                        <li><a href="{{asset('/others')}}">{{__('menu.menu.others')}}</a></li>
                         <li><a href='#'>purchase</a></li>
-                        <li><a href="{{asset('all')}}">map</a></li>
+                        <li><a href="{{asset('all')}}">{{__('menu.menu.map')}}</a></li>
                     </ul>
                 </div>
             </div>
